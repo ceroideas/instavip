@@ -1,0 +1,32 @@
+page-login {
+	.bg-img {
+		background: url('../../assets/bg.jpg') 0 0/100% 100% no-repeat;
+		&:after {
+			content: "";
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			background-color: rgba(0,0,0,.3);
+			position: absolute;
+		}
+	}
+	.content-box {
+		top: 10%;
+		padding: 0 50px;
+		text-align: center;
+		position: relative;
+		z-index: 9999;
+	}
+	.img-logo {
+		width: 200px;
+		margin: auto;
+		position: relative;
+		display: block;
+	}
+	h1 {
+		color: #f0f0f0;
+		font-weight: thin;
+		letter-spacing: -1.6px;
+	}
+}

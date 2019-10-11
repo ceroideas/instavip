@@ -1,0 +1,59 @@
+page-traking {
+	.circle-img {
+		top: 10px !important;
+	}
+	.progress-bg {
+		background-color: silver;
+		width: 100%;
+		height: 16px;
+		border-radius: 3px;
+		margin-top: 30px;
+	}
+
+	#progress {
+		background: -webkit-linear-gradient(left,#6036bb,#ac2b92,#f17c0a);
+		display: block;
+		height: 16px;
+		border-radius: 3px;
+		transition: all 300ms ease 100ms;
+	}
+	ion-checkbox {
+		margin-right: 0 !important;
+		right: -12px !important;
+		position: relative !important;
+	}
+	[readonly] {
+		pointer-events: none;
+	}
+	ion-card-header {
+		padding: 10px 0 !important;
+		padding-top: 18px !important;
+	}
+	ion-card {
+		border-radius: 3px !important;
+		h2 {
+			font-size: 20px !important;
+			font-weight: bolder !important;
+			color: #6a45c7 !important;
+		}
+		text-align: center; position: relative; top: 180px; padding: 0 20px;
+		ion-card-content {
+			color: #ce141c;
+			b {
+				font-size: 16px;
+				display: block;
+				margin-bottom: 8px;
+			}
+			p {
+				color: #ce141c !important;
+				font-weight: bolder;
+			}
+		}
+	}
+
+	.instavip-btn {
+		position: absolute;
+		bottom: 40px;
+		width: calc(100vw - 32px);
+	}
+}

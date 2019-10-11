@@ -20,10 +20,25 @@
     "@angular/http": "5.2.11",
     "@angular/platform-browser": "5.2.11",
     "@angular/platform-browser-dynamic": "5.2.11",
+    "@auth0/cordova": "^0.3.0",
     "@ionic-native/core": "~4.20.0",
+    "@ionic-native/in-app-browser": "^4.20.0",
+    "@ionic-native/safari-view-controller": "^4.20.0",
     "@ionic-native/splash-screen": "~4.20.0",
     "@ionic-native/status-bar": "~4.20.0",
-    "@ionic/storage": "2.2.0",
+    "@ionic/storage": "^2.2.0",
+    "auth0-js": "^9.11.3",
+    "cordova-android": "7.1.4",
+    "cordova-plugin-customurlscheme": "4.4.0",
+    "cordova-plugin-device": "^2.0.2",
+    "cordova-plugin-inappbrowser": "3.1.0",
+    "cordova-plugin-ionic-keyboard": "^2.1.3",
+    "cordova-plugin-ionic-webview": "^4.1.1",
+    "cordova-plugin-safariviewcontroller": "1.6.0",
+    "cordova-plugin-splashscreen": "^5.0.2",
+    "cordova-plugin-statusbar": "^2.4.2",
+    "cordova-plugin-whitelist": "^1.3.3",
+    "cordova-sqlite-storage": "3.3.0",
     "ionic-angular": "3.9.5",
     "ionicons": "3.0.0",
     "rxjs": "5.5.11",
@@ -34,5 +49,29 @@
     "@ionic/app-scripts": "3.2.2",
     "typescript": "~2.6.2"
   },
-  "description": "An Ionic project"
+  "description": "An Ionic project",
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-safariviewcontroller": {},
+      "cordova-plugin-customurlscheme": {
+        "URL_SCHEME": "io.ivip.app",
+        "ANDROID_SCHEME": "io.ivip.app",
+        "ANDROID_HOST": "ceroideas.eu.auth0.com",
+        "ANDROID_PATHPREFIX": "/cordova/io.ivip.app/callback"
+      },
+      "cordova-plugin-inappbrowser": {},
+      "cordova-sqlite-storage": {},
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-statusbar": {},
+      "cordova-plugin-device": {},
+      "cordova-plugin-splashscreen": {},
+      "cordova-plugin-ionic-webview": {
+        "ANDROID_SUPPORT_ANNOTATIONS_VERSION": "27.+"
+      },
+      "cordova-plugin-ionic-keyboard": {}
+    },
+    "platforms": [
+      "android"
+    ]
+  }
 }

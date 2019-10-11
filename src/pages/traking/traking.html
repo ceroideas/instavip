@@ -1,0 +1,88 @@
+<!--
+  Generated template for the TrakingPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="dark">
+  	<ion-buttons right>
+  		<button style="top: 6px" ion-button icon-only><ion-icon name="close"></ion-icon></button>
+  	</ion-buttons>
+    <ion-title>Rastreo</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<div class="circle-img"
+		(click)="reloadCredits()"
+		[ngStyle]="{ 'background-image': 'url(' + user.picture + ')'}">
+	</div>
+
+	<div style="text-align: center; position: relative; top: 160px; padding: 0 20px;">
+		
+		<h2>{{user.name}}</h2>
+
+		<div *ngIf="!complete">
+			<p>Estamos analizando tu cuenta. <br> Solo nos llevará un momento!!</p>
+
+			<div class="progress-bg">
+				<span id="progress" [ngStyle]="{'width':progress}"></span>
+			</div>
+			<br>
+
+			<ion-list no-lines>
+				<ion-item>
+					<ion-label>Foto Perfil y Biografía</ion-label>
+					<span item-end>
+						<ion-checkbox readonly [(ngModel)]="todo.biog"></ion-checkbox>
+					</span>
+				</ion-item>
+				<ion-item>
+					<ion-label>Mínimo 1.000 seguidores</ion-label>
+					<span item-end>
+						<ion-checkbox readonly [(ngModel)]="todo.folw"></ion-checkbox>
+					</span>
+				</ion-item>
+				<ion-item>
+					<ion-label>Mínimo 9 post</ion-label>
+					<span item-end>
+						<ion-checkbox readonly [(ngModel)]="todo.post"></ion-checkbox>
+					</span>
+				</ion-item>
+				<ion-item>
+					<ion-label>Última publicación</ion-label>
+					<span item-end>
+						<ion-checkbox readonly [(ngModel)]="todo.last"></ion-checkbox>
+					</span>
+				</ion-item>
+				<ion-item>
+					<ion-label>30% más de seguidores</ion-label>
+					<span item-end>
+						<ion-checkbox readonly [(ngModel)]="todo.more"></ion-checkbox>
+					</span>
+				</ion-item>
+			</ion-list>
+		</div>
+
+	</div>
+
+	<div *ngIf="complete">
+		<ion-card>
+		
+		  <ion-card-header>
+		    <h2>OKEY! CUMPLE LOS REQUISITOS</h2>
+		  </ion-card-header>
+		
+		  <ion-card-content>
+		    <b>IMPORTANTE</b>
+		    <p>Si dejas de seguir a los perfiles seguidos en la app antes de 45 días tu cuenta podría ser suspendida</p>
+		  </ion-card-content>
+		
+		</ion-card>
+
+		<button class="instavip-btn mt28" (click)="continue()">CONTINUAR</button>
+	</div>
+
+
+</ion-content>

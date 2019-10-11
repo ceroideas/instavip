@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-navbar color="dark">
+  	<ion-buttons left>
+  		<button ion-button icon-only (click)="openMenu()">
+	    	<ion-icon style="font-size: 48px; color: #fff; position: relative;top:-3px" name="arrow-back"></ion-icon>
+  		</button>
+  		<button ion-button icon-only>
+			<img src="assets/search-2.png" alt="" id="l-icon">
+  		</button>
+	</ion-buttons>
+    <ion-title>
+    	Likes
+	</ion-title>
+  	<ion-buttons end>
+  		<button ion-button icon-only>
+	    	<img src="assets/package.png" alt="" id="r-icon">
+	    </button>
+  	</ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+	<ion-row no-padding>
+		<ion-col (click)="openDetail('Mike Malone','assets/face0.jpg')" no-padding col-6 style="background-image: url('assets/face0.jpg'); background-size: cover; background-position: center; height: 200px;border: 2px solid #fff;">
+			<span class="onfire"><img src="assets/fuego.png" alt="">1263</span>
+			<span class="name">Mike Malone</span>
+		</ion-col>
+		<ion-col (click)="openDetail('Nelle Caldwell','assets/face1.jpg')" no-padding col-6 style="background-image: url('assets/face1.jpg'); background-size: cover; background-position: center; height: 200px;border: 2px solid #fff;">
+			<span class="onfire"><img src="assets/fuego.png" alt="">1263</span>
+			<span class="name">Nelle Caldwell</span>
+		</ion-col>
+		<ion-col (click)="openDetail('Illya Alvarado','assets/face2.jpg')" no-padding col-6 style="background-image: url('assets/face2.jpg'); background-size: cover; background-position: center; height: 200px;border: 2px solid #fff;">
+			<span class="onfire"><img src="assets/fuego.png" alt="">1263</span>
+			<span class="name">Illya Alvarado</span>
+		</ion-col>
+		<ion-col (click)="openDetail('Lola Baley','assets/face3.jpg')" no-padding col-6 style="background-image: url('assets/face3.jpg'); background-size: cover; background-position: center; height: 200px;border: 2px solid #fff;">
+			<span class="onfire"><img src="assets/fuego.png" alt="">1263</span>
+			<span class="name">Lola Baley</span>
+		</ion-col>
+		<ion-col (click)="openDetail('Brad Pitt','assets/face4.jpg')" no-padding col-6 style="background-image: url('assets/face4.jpg'); background-size: cover; background-position: center; height: 200px;border: 2px solid #fff;">
+			<span class="onfire"><img src="assets/fuego.png" alt="">1263</span>
+			<span class="name">Brad Pitt</span>
+		</ion-col>
+		<ion-col (click)="openDetail('Bill Gates','assets/face5.jpg')" no-padding col-6 style="background-image: url('assets/face5.jpg'); background-size: cover; background-position: center; height: 200px;border: 2px solid #fff;">
+			<span class="onfire"><img src="assets/fuego.png" alt="">1263</span>
+			<span class="name">Bill Gates</span>
+		</ion-col>
+		<ion-col (click)="openDetail('Chris Evans','assets/face6.jpg')" no-padding col-6 style="background-image: url('assets/face6.jpg'); background-size: cover; background-position: center; height: 200px;border: 2px solid #fff;">
+			<span class="onfire"><img src="assets/fuego.png" alt="">1263</span>
+			<span class="name">Chris Evans</span>
+		</ion-col>
+		<ion-col (click)="openDetail('Daniel Radcliffe','assets/face7.jpg')" no-padding col-6 style="background-image: url('assets/face7.jpg'); background-size: cover; background-position: center; height: 200px;border: 2px solid #fff;">
+			<span class="onfire"><img src="assets/fuego.png" alt="">1263</span>
+			<span class="name">Daniel Radcliffe</span>
+		</ion-col>
+	</ion-row>
+
+</ion-content>

@@ -1,0 +1,50 @@
+<ion-header hidden>
+  <ion-navbar>
+    <ion-title>login</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="bg-img">
+
+	<div class="content-box" *ngIf="!auth.loading">
+		
+		<p *ngIf="auth.loading" text-center>Cargando...</p>
+
+		<img src="assets/logo-instvip.png" alt="" class="img-logo">
+		<h1>Accede con tu cuenta de instagram</h1>
+
+		<div *ngIf="auth.loggedIn">
+			<ion-card *ngIf="auth.user">
+			    <img [src]="auth.user.picture">
+			    <ion-card-content>
+			      <ion-card-title>{{ auth.user.name }}</ion-card-title>
+			      <!-- <pre>{{ auth.user | json }}</pre> -->
+			    </ion-card-content>
+			</ion-card>
+
+			<button *ngIf="auth.loggedIn" class="instavip-btn mt28" (click)="goToStart()">CONTINUAR</button>
+
+			<!-- <button
+		    ion-button
+		    block
+		    color="danger"
+		    (click)="auth.logout()">CERRAR SESIÓN</button> -->
+
+		<!-- <div>
+			<label class="label-control">Email</label>
+			<input type="text" class="form-control">
+			<label class="label-control">Password</label>
+			<input type="password" class="form-control">
+		</div> -->
+		</div>
+
+		<div *ngIf="!auth.loading">
+
+			<button *ngIf="!auth.loggedIn" class="instavip-btn mt28" (click)="auth.login()">ACCEDER</button>
+
+			<br>
+			<br>
+
+		</div>
+	</div>
+</ion-content>

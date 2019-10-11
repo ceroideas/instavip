@@ -1,0 +1,67 @@
+page-followers {
+	ion-content	{
+		background: -webkit-radial-gradient(50% -40%, circle,#202835 30%,#202835 50%, #ffffff 0%);
+	}
+	.icon-holder {
+		display: inline-block;
+	    width: 22px;
+	    padding: 0px;
+	    font-size: 20px;
+	    line-height: 1.4em;
+	    color: #fff;
+	    border-radius: 8px;
+	    height: 18px;
+	    margin: 0 10px !important;
+	}
+	.icon-holder-cog {
+		color: #333;
+	}
+
+	.icon-top-holder {
+		width: calc(100% - 30px);
+		position: absolute;
+		font-size: 48px;
+		color: #fff;
+		ion-icon {
+			float: left;
+		}
+		#l-icon {
+			position: relative;
+			top: 14px;
+			height: 28px;
+			float: left;
+			margin-left: 15px;
+		}
+		#r-icon {
+			position: relative;
+			top: 10px;
+			height: 32px;
+			float: right;
+		}
+	}
+
+	.card-buy {
+		background-color: #47566d;
+		border-radius: 8px;
+		height: 150px;
+		color: #fff;
+		padding: 50px 10px;
+		background-image: url('../../assets/package.png');
+		background-repeat: no-repeat;
+		background-size: 40px;
+		background-position: 95% 10px;
+		text-align: center;
+		h1 {
+			margin: 0;
+			font-weight: 700;
+			font-size: 48px;
+			line-height: .6;
+			small {
+				font-size: 16px;
+			}
+		}
+		&:active {
+			background-color: #202835;
+		}
+	}
+}

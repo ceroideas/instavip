@@ -1,1 +1,41 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-menu [content]="content" side="left" type="overlay">
+  <!-- <ion-header>
+    <ion-toolbar color="primaryalt">
+      <button ion-button menuToggle>
+        <ion-icon name="close"></ion-icon>
+      </button>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header> -->
+
+  <ion-content>
+
+    <div style="top: 40px; position: relative;">
+
+    <ion-icon name="close" (click)="toggleMenu()" style="position: absolute; color: #fff; right: 20px; top: 0; font-size: 38px;"></ion-icon>
+
+    <div class="circle-img" style="position: relative; top: 0 !important" [ngStyle]="{'background-image':'url('+photo+')'}">
+    </div>
+
+    <h1 style="color: #fff; text-align: center">Cero Ideas</h1>
+
+    <ion-list class="list-menu" no-padding>
+
+      <ion-item no-padding><span class="text-menu"><a href="javascript:;" (click)="toggleMenu()"> <img src="assets/tabs/likeB.png" alt=""> <span class="text-menu">Conseguir "Me gusta"</span></a></span></ion-item>
+      <ion-item no-padding><span class="text-menu"><a href="javascript:;" (click)="toggleMenu()"> <img src="assets/tabs/add-friendB.png" alt=""> <span class="text-menu">Conseguir seguidores</span></a></span></ion-item>
+      <ion-item no-padding><span class="text-menu"><a href="javascript:;" (click)="toggleMenu()"> <img src="assets/tabs/followerB.png" alt=""> <span class="text-menu">Cambiar Cuenta</span></a></span></ion-item>
+      <ion-item no-padding><span class="text-menu"><a href="javascript:;" (click)="logout()"> <img src="assets/tabs/shareB.png" alt=""> <span class="text-menu">Salir</span></a></span></ion-item>
+      <ion-item no-padding><span class="text-menu"><a href="javascript:;" (click)="toggleMenu()"> <img src="assets/tabs/userB.png" alt=""> <span class="text-menu">Mi Cuenta</span></a></span></ion-item>
+
+      <img id="logo-w" src="assets/logo-instvip-blanco.png" alt="">
+      <br><br>
+
+    </ion-list>
+    </div>
+
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
